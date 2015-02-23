@@ -1,0 +1,11 @@
+{
+  "name": "kurea-contrib-math",
+  "main": "index.coffee",
+  "version": "0.0.0",
+  "description": "A math expression evaluator Module for Kurea.",
+  "license": "MIT",
+  "dependencies": {
+    "irc-colors": "^1.1.0",
+    "mathjs": "^1.3.0"
+  }
+}
