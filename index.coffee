@@ -1,6 +1,7 @@
 module.exports = (Module) ->
+	_ = require 'lodash'
 	color = require 'irc-colors'
-	parser = require('mathjs')().parser()
+	parser = require('mathjs')
 	
 	class MathModule extends Module
 		shortName: "Math"
@@ -19,6 +20,8 @@ module.exports = (Module) ->
 			expr = route.splats[0]
 			try
 				result = parser.eval(expr)
+				if _.isFunction(result)
+					result = "[Function: #{result.name}]"
 				@reply origin, "#{origin.user}, your answer is #{color.bold(result)}"
 			catch e
 				@reply origin, "Unable to evaluate expression: #{e.message}"
