@@ -18,7 +18,8 @@ To install from Kurea at runtime, give Kurea this command:
 
 ## Usage
 
-`!math args...`
+`!math expression`
 
- - `args...`: a list of arguments
- 
+ - `expression`: an expression for [Math.js](http://mathjs.org/) to evaluate
+
+ For a complete list of what this module can evaluate, read the [Math.js docs](http://mathjs.org/docs/index.html).
